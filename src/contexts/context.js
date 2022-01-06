@@ -6,7 +6,7 @@ export const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("Matrix");
-  const { isLoading, error, data: movies } = useFetch(`&s=${query}`);
+  const { isLoading, error, data: movies } = useFetch(`&s=${query}&type=movie`);
 
   return (
     <AppContext.Provider value={{ isLoading, error, movies, query, setQuery }}>

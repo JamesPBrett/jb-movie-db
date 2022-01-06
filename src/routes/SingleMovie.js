@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import useFetch from "../contexts/useFetch";
 const SingleMovie = () => {
   const { id } = useParams();
-  const { isLoading, error, data: movie } = useFetch(`&i=${id}`);
+  const { isLoading, error, data: movie } = useFetch(`&i=${id}&plot=full`);
 
   if (isLoading) {
     return <div className="loading" />;
@@ -23,6 +23,12 @@ const SingleMovie = () => {
     Plot: plot,
     Released: released,
     Genre: genre,
+    Runtime: runtime,
+    Director: director,
+    Writer: writer,
+    Actors: actors,
+    Awards: awards,
+    BoxOffice: boxoffice,
   } = movie;
 
   return (
@@ -33,6 +39,12 @@ const SingleMovie = () => {
         <p>{plot}</p>
         <p>Date Released: {released}</p>
         <p>Genre: {genre}</p>
+        <p>Runtime: {runtime}</p>
+        <p>Director: {director}</p>
+        <p>Writer: {writer}</p>
+        <p>Actors: {actors}</p>
+        <p>Awards: {awards}</p>
+        <p>Boxoffice: {boxoffice}</p>
         <Link to="/" className="btn">
           back to movies
         </Link>
