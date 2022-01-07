@@ -2,7 +2,7 @@
   "name": "jbmd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jamespbrett.github.io/jbmd",
+  "homepage": "http://jamespbrett.github.io/jb-movie-db",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
